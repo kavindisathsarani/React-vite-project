@@ -1,4 +1,13 @@
+/*
 .main-content{
     background-color:rgb(218,215,203);
     padding: 2px;
+}*/
+
+.main-content {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 35vh; /* makes sure it has a good height */
+    border-radius: 8px;
 }
