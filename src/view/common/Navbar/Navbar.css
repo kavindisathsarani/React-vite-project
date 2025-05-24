@@ -7,6 +7,38 @@
 body{
     margin: 0;
 }
+
+.btn-sign-in {
+    background-color: #4eaacf;
+    color: #f0ecec;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none; /* Optional: remove default border */
+    font-size: 1.2rem; /* Increase text size */
+    padding: 10px 12px; /* Increase size by padding */
+ }
+
+.btn-sign-in a {
+    text-decoration: none;
+    color: #f0ecec;
+}
+
+.btn-sign-in a:hover {
+    color: #00bcd4;
+}
+
+.business-name{
+    color: white;
+    margin-left: 10px;
+
+}
+
+.navbar-logo{
+    display: flex;
+    align-items: center;
+
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
