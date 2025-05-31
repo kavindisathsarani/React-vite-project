@@ -6,7 +6,7 @@ import * as React from "react";
 
 export function MainContent() {
     return (
-        <div className="bg-[#dad7cb] text-center min-h-[55vh] px-10 py-16 mx-auto">
+        <div className="bg-white text-center min-h-[55vh] px-10 py-16 mx-auto">
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
