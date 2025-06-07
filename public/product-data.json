@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "name": "hair",
+    "price": 2000,
+    "currency": "LKR",
+    "image": "pexels-chloekalaartist-1321916.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Nail Painting",
+    "price": 2500,
+    "currency": "LKR",
+    "image": "pexels-linda-markaj-449376348-15491630.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Hair Decoration",
+    "price": 2800,
+    "currency": "LKR",
+    "image": "pexels-criativithy-894081-1821095.jpg"
+  },
+
+  {
+    "id": 4,
+    "name": "Hair Decoration",
+    "price": 2800,
+    "currency": "LKR",
+    "image": "pexels-criativithy-894081-1821095.jpg"
+  }
+]
