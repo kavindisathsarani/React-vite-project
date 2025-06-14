@@ -3,14 +3,19 @@ import { Home } from "../../pages/Home/Home.tsx";
 import { About } from "../../pages/About/About.tsx";
 import { Contact } from "../../pages/Contact/Contact.tsx";
 import * as React from "react";
+import {ShoppingCart} from "../../pages/ShoppingCart/ShoppingCart.tsx";
+import {itemList} from "../ModifyCart/ModifyCart.tsx";
+
+
 
 export function MainContent() {
     return (
-        <div className="bg-white text-center min-h-[55vh] px-10 py-16 mx-auto">
+        <div className="flex justify-center items-center min-h-screen ">
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/shopping-cart" element={<ShoppingCart itemsList={itemList}/>} />
             </Routes>
         </div>
     );

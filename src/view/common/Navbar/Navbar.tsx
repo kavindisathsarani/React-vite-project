@@ -38,6 +38,14 @@ export function Navbar() {
                         Contact
                     </Link>
                 </li>
+                <li>
+                    <Link
+                        to="/shopping-cart"
+                        className="text-white text-base hover:text-[#00bcd4] transition-colors duration-300"
+                    >
+                        My-Cart
+                    </Link>
+                </li>
             </ul>
 
             <button className="bg-[#4eaacf] text-[#f0ecec] text-lg px-4 py-2 rounded-lg hover:bg-[#009cb0]  transition">

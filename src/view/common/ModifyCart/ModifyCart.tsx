@@ -6,7 +6,7 @@ interface ModifyCartProps {
 }
 
 export const itemList:CartItem[] = [];
-export function ModifyCart({data}) {
+export function ModifyCart({ data }: ModifyCartProps)  {
 
     const [itemCount, setItemCount] = useState(1);
 
