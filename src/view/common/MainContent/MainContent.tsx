@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { Home } from "../../pages/Home/Home.tsx";
 import { About } from "../../pages/About/About.tsx";
 import { Contact } from "../../pages/Contact/Contact.tsx";
-import * as React from "react";
+// import * as React from "react";
 import {ShoppingCart} from "../../pages/ShoppingCart/ShoppingCart.tsx";
 import {itemList} from "../ModifyCart/ModifyCart.tsx";
 

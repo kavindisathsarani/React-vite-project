@@ -1,4 +1,4 @@
-import hair from "../../../assets/products/pexels-chloekalaartist-1321916.jpg";
+// import hair from "../../../assets/products/pexels-chloekalaartist-1321916.jpg";
 import {useState} from "react";
 import {ModifyCart} from "../ModifyCart/ModifyCart.tsx";
 
@@ -51,7 +51,7 @@ export function Product({data}: ProductProps) {
                 {isActive ? (
                     <ModifyCart
                         data={{product: data}}
-                        className="mt-3"
+
                     />
                 ) : (
                     <button

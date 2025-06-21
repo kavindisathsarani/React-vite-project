@@ -4,7 +4,7 @@ interface ShoppingCartProps {
     itemsList: CartItem[]
 }
 
-export function ShoppingCart({itemsList}) {
+export function ShoppingCart({itemsList} : ShoppingCartProps) {
     return (
         <div className="flex justify-center items-center px-4">
             <div className="w-full max-w-screen-xl border border-green-200">
