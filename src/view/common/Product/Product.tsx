@@ -1,14 +1,7 @@
 // import hair from "../../../assets/products/pexels-chloekalaartist-1321916.jpg";
 import {useState} from "react";
 import {ModifyCart} from "../ModifyCart/ModifyCart.tsx";
-
-type ProductData = {
-    id: number,
-    name: string,
-    price: string,
-    currency: string,
-    image: string
-}
+import type {ProductData} from "../../../model/ProductData.ts";
 
 type ProductProps = {
     data: ProductData
