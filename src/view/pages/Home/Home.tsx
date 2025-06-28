@@ -1,7 +1,7 @@
 /*import hair from '../../../assets/products/pexels-chloekalaartist-1321916.jpg';
 import nail from '../../../assets/products/pexels-linda-markaj-449376348-15491630.jpg';
 import longhair from '../../../assets/products/pexels-criativithy-894081-1821095.jpg';*/
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import {Product} from "../../common/Product/Product.tsx";
 import {useDispatch, useSelector} from "react-redux";
 import type {AppDispatch, RootState} from "../../../store/store.ts";

@@ -21,8 +21,13 @@ export function Product({data}: ProductProps) {
     const dispatch = useDispatch<AppDispatch>();
 
     const [isActive, setIsActive] = useState(false);
+    /**
+     * Handles adding the current product to the shopping cart.
+     * - Dispatches the addItemToCart action with the product data to update the Redux store
+     * - Sets the isActive state to true to show the ModifyCart component for quantity adjustments
+     */
     const addToCart = () => {
-        dispatch(addItemToCart(data))
+        dispatch(addItemToCart(data));
         setIsActive(true);
     }
 
