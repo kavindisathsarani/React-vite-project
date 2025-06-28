@@ -4,13 +4,13 @@ import {useDispatch, useSelector} from "react-redux";
 import type {AppDispatch, RootState} from "../../../store/store.ts";
 import {getAllProducts} from "../../../slices/productsSlice.ts";
 
-type ProductData = {
+/*type ProductData = {
     id: number,
     name: string,
     price: string,
     currency: string,
     image: string
-}
+}*/
 
 
 export function Home() {
