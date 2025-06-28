@@ -1,19 +1,17 @@
-import type {CartItem} from "../../../model/CartItem.ts";
-import type {AppDispatch} from "../../../store/store.ts";
-import {useDispatch} from "react-redux";
-import {useState} from "react";
+import type {AppDispatch, RootState} from "../../../store/store.ts";
+import {useDispatch, useSelector} from "react-redux";
 import {decreaseQuantity, increaseQuantity} from "../../../slices/cartSlice.ts";
 
 interface ModifyCartProps {
     data: any
 }
 
-export const itemList: CartItem[] = [];
-
 export function ModifyCart({data}: ModifyCartProps) {
 
     const dispatch = useDispatch<AppDispatch>();
-    const [itemCount, setItemCount] = useState(1);
+    // const [itemCount, setItemCount] = useState(1);
+
+    const item = useSelector((state:RootState) => state.cart.items).find(cartItem => cartItem.product.id === data.product.id);
 
     /*  useEffect(() => {
 
@@ -40,18 +38,18 @@ export function ModifyCart({data}: ModifyCartProps) {
                  : (
                      alert("Item count cannot be less than 1!"), prevValue))*/
 
-        if (itemCount > 1) {
-            setItemCount(prev => prev - 1);
+        if (item && item.itemCount > 1) {
+            // setItemCount(prev => prev - 1);
             dispatch(decreaseQuantity(data.product.id));
-        }else {
+        } else {
             alert("Item count cannot be less than 1!");
         }
     }
 
 
     const IncreaseItemCount = () => {
-        setItemCount(prev => prev + 1);
-        dispatch(increaseQuantity(data.id));
+        // setItemCount(prev => prev + 1);
+        dispatch(increaseQuantity(data.product.id));
     }
 
     return (
@@ -60,7 +58,7 @@ export function ModifyCart({data}: ModifyCartProps) {
                     onClick={decreaseItemCount}>-
             </button>
             <small
-                className="text-[20px]">{itemCount}</small>
+                className="text-[20px]">{item?.itemCount}</small>
             <button className="float-left text-[20px] bg-yellow-300 rounded-lg h-8 w-8"
                     onClick={IncreaseItemCount}>+
             </button>

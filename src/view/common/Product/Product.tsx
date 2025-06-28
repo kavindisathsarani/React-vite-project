@@ -1,9 +1,7 @@
-// import hair from "../../../assets/products/pexels-chloekalaartist-1321916.jpg";
-import {useState} from "react";
 import {ModifyCart} from "../ModifyCart/ModifyCart.tsx";
 import type {ProductData} from "../../../model/ProductData.ts";
-import {useDispatch} from "react-redux";
-import type {AppDispatch} from "../../../store/store.ts";
+import {useDispatch, useSelector} from "react-redux";
+import type {AppDispatch, RootState} from "../../../store/store.ts";
 import {addItemToCart} from "../../../slices/cartSlice.ts";
 
 type ProductProps = {
@@ -20,15 +18,14 @@ export function Product({data}: ProductProps) {
 
     const dispatch = useDispatch<AppDispatch>();
 
-    const [isActive, setIsActive] = useState(false);
-    /**
-     * Handles adding the current product to the shopping cart.
-     * - Dispatches the addItemToCart action with the product data to update the Redux store
-     * - Sets the isActive state to true to show the ModifyCart component for quantity adjustments
-     */
+    const item = useSelector((state:RootState) => state.cart.items.find(cartItem => cartItem.product.id === data.id));
+
+    // const [isActive, setIsActive] = useState(false);
+
+
     const addToCart = () => {
         dispatch(addItemToCart(data));
-        setIsActive(true);
+        // setIsActive(true);
     }
 
     return (
@@ -49,7 +46,7 @@ export function Product({data}: ProductProps) {
                     </div>
                 </div>
 
-                {isActive ? (
+                {item ? (
                     <ModifyCart
                         data={{product: data}}
 
@@ -70,35 +67,7 @@ export function Product({data}: ProductProps) {
                 )}
             </div>
         </div>
-        /* <div className="w-48 bg-white rounded-lg shadow-md p-2 border border-gray-300">
-             <img
-                 className="h-32 w-full object-cover rounded-md"
-                 src={image}
-                 alt="Hair Highlight"
-             />
-             <div className="mt-2">
-                 <div className="flex justify-between items-center">
-                     <h3 className="text-green-700 text-sm font-medium">{data.name}</h3>
-                     <div className="bg-yellow-300 text-sm text-gray-800 px-2 py-0.5 rounded-md">
-                         {data.price} <small className="text-[10px]">{data.currency}</small>
-                     </div>
-                 </div>
-                 {
-                     isActive?(
-                         <ModifyCart data={{
-                             product:data
-                         }}/>
-                     ): (
-                         <button
-                             className="w-full mt-2 bg-green-700 hover:bg-green-800 text-white text-xs py-1 rounded-md
-                     transition duration-200" onClick={addToCart}>
-                             Add to Cart
-                         </button>
-                     )
-                 }
 
-             </div>
-         </div>*/
 
     );
 }

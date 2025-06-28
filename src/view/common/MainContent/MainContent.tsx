@@ -4,9 +4,7 @@ import { About } from "../../pages/About/About.tsx";
 import { Contact } from "../../pages/Contact/Contact.tsx";
 // import * as React from "react";
 import {ShoppingCart} from "../../pages/ShoppingCart/ShoppingCart.tsx";
-import {itemList} from "../ModifyCart/ModifyCart.tsx";
-
-
+// import {itemList} from "../ModifyCart/ModifyCart.tsx";
 
 export function MainContent() {
     return (
@@ -15,12 +13,11 @@ export function MainContent() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/shopping-cart" element={<ShoppingCart itemsList={itemList}/>} />
+                <Route path="/shopping-cart" element={<ShoppingCart/>} />
             </Routes>
         </div>
     );
 }
-
 
 /*
 import './MainContent.css'
